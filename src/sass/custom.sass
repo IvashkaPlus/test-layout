@@ -3,29 +3,43 @@
 $text-color-header: #434f74
 $text-color: #959fbb
 $text-color-link: #6a93ff
+$text-color-hover: #676e81
 
 $text-size-paragraph: 14px
 $text-size-header: 19px
 
 $icon-size: 20px
 
+$button-bg-color: #f24e85
+$button-bg-color-hover: #be3d68
+
 // Text
 
-@mixin std-text
+@mixin std-text($font-weight: normal)
   font-size: $text-size-paragraph
+  font-weight: $font-weight
   color: $text-color
   line-height: 1.2
+
 
 // Icons
 
 @mixin icon
+  display: block
   width: $icon-size
   height: $icon-size
-  display: block
+
+@mixin icon-link
+  padding-left: 30px
+  position: relative
+  &::before
+    @include icon
+    content: ""
+    position: absolute
+    left: 0
 
 
 // General
-
 
 html
   box-sizing: border-box
@@ -41,8 +55,21 @@ body
   color: $text-color
   background: white
 
+img
+  max-width: 100%
+  height: auto
+
+// ********************
 
 // Header styles
+
+.header
+  width: 100%
+  background: #fff
+  top: 0
+  left: 0
+  position: absolute
+  z-index: 2
 
 .header__inner
   padding-left: 45px
@@ -65,3 +92,126 @@ body
 .header__link-nav-img
   @include icon
   height: 15px
+
+// ********************
+
+//Nav styles
+
+.nav
+  padding: 65px 30px 0 45px
+
+.nav__list
+  padding: 0
+  margin: 0
+  width: 100%
+
+.nav__list-title,
+.nav__list-item
+  display: block
+
+.nav__list-title
+  @include std-text(bold)
+  color: $text-color-header
+  margin: 40px 0
+
+.nav__list-item
+  margin-bottom: 30px
+  &:last-child
+    margin-bottom: 0
+
+.nav__link
+  @include std-text(bold)
+  transition: color .1s linear
+  &:hover
+    color: $text-color-hover
+    text-decoration: none
+
+
+.nav__home-link
+  @include icon-link
+  &::before
+    background: url("../image/home-ico.svg") no-repeat left
+
+.nav__channels-link
+  @include icon-link
+  &::before
+    background: url("../image/channels-ico.svg") no-repeat left
+
+
+.nav__trending-link
+  @include icon-link
+  &::before
+    background: url("../image/trending-ico.svg") no-repeat left
+
+
+.nav__subscriptions-link
+  @include icon-link
+  &::before
+    background: url("../image/subscriptions-ico.svg") no-repeat left
+
+
+.nav__history-link
+  @include icon-link
+  &::before
+    background: url("../image/history-ico.svg") no-repeat left
+
+.nav__later-link
+  @include icon-link
+  &::before
+    background: url("../image/later-ico.svg") no-repeat left
+
+.nav__likes-link
+  @include icon-link
+  &::before
+    background: url("../image/likes-ico.svg") no-repeat left
+
+// ********************
+
+// Main content styles
+// Banner styles
+
+.banner
+  padding-top: 105px
+  min-height: 475px
+  background: url("../image/bg.jpg") no-repeat
+  background-size: cover
+
+.banner__img-container
+  width: 100px
+  height: 100px
+
+.banner__img
+  object-fit: cover
+  width: 100%
+  height: 100%
+  border-radius: 5px
+
+.banner__channel-name
+  color: white
+  font-size: 22px
+
+.banner__btn-subscribe
+  @include std-text(bold)
+  color: white
+  border: 0
+  border-radius: 5px
+  padding: 10px 20px
+  background-color: $button-bg-color
+  transition: background-color .1s linear
+  &:hover
+    background-color: $button-bg-color-hover
+
+.banner__facebook-img,
+.banner__google-plus-img,
+.banner__twitter-img
+  width: 30px
+
+// ********************
+// Channel info
+
+.channel-info__menu-item
+  @include std-text(bold)
+  display: block
+  padding: 20px
+  .active
+    border: 1px $text-color-header solid
