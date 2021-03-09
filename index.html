@@ -2,16 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sass training</title>
+    <title>Layout</title>
 </head>
 <body>
 
     <header class="header">
         <div class="container-fluid p-0">
 
-            <div class="header__inner shadow-sm p-3">
+            <div class="header__inner shadow-sm pt-3 pb-3 ">
                 <div class="row">
-
+                    <div class="col-lg-3">
+                        <div class="row align-items-center">
+                            <div class="col-lg-1">
+                                <a href="#" class="header__link-nav">
+                                    <img class="header__link-nav-img" src="./src/image/menu-ico.svg" alt="YouTube Menu">
+                                </a>
+                            </div>
+                            <div class="col-lg-11">
+                                <a href="#" class="header__link-nav">
+                                    <img src="./src/image/logo.svg" alt="YouTube">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <input type="text" placeholder="Search..." class="header__search-input">
+                            </div>
+                            <div class="col-lg-2">
+                                <a href="#" class="header__link-upload">
+                                    <img class="header__link-upload-img" src="./src/image/upload-ico.svg" alt="Upload video">
+                                </a>
+                            </div>
+                            <div class="col-lg-1">
+                                <a href="#" class="header__link-notification">
+                                    <img class="header__link-notification-img" src="./src/image/notification-ico.svg" alt="Your notifications">
+                                </a>
+                            </div>
+                            <div class="col-lg-1">
+                                <a href="#" class="header__link-account">
+                                    <img src="./src/image/avatar.png" alt="Your account">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -2,9 +2,30 @@
 
 $text-color-header: #434f74
 $text-color: #959fbb
+$text-color-link: #6a93ff
 
 $text-size-paragraph: 14px
 $text-size-header: 19px
+
+$icon-size: 20px
+
+// Text
+
+@mixin std-text
+  font-size: $text-size-paragraph
+  color: $text-color
+  line-height: 1.2
+
+// Icons
+
+@mixin icon
+  width: $icon-size
+  height: $icon-size
+  display: block
+
+
+// General
+
 
 html
   box-sizing: border-box
@@ -21,6 +42,26 @@ body
   background: white
 
 
+// Header styles
 
+.header__inner
+  padding-left: 45px
+  padding-right: 45px
 
+.header__search-input
+  border: 0
+  width: 100%
+  padding-left: 30px
+  background: url("../image/search-ico.svg") no-repeat left
+  background-size: $icon-size
+  @include std-text
+  &:focus
+    outline: 0
 
+.header__link-upload-img,
+.header__link-notification-img
+  @include icon
+
+.header__link-nav-img
+  @include icon
+  height: 15px
