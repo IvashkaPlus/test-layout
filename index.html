@@ -9,57 +9,57 @@
     <header class="header">
         <div class="container-fluid p-0">
 
-            <div class="header__inner shadow-sm pt-3 pb-3">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="row align-items-center">
-                            <div class="col-lg-1">
-                                <a href="#" class="header__link-nav">
+                <div class="row w-100 m-0 shadow-sm">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="row align-items-center  p-3  pr-5 pl-5">
+                            <div class="col-lg-1 col-md-2">
+                                <a href="#nav" data-toggle="collapse" class="header__link-nav">
                                     <img class="header__link-nav-img" src="./src/image/menu-ico.svg" alt="YouTube Menu">
                                 </a>
                             </div>
-                            <div class="col-lg-11">
-                                <a href="#" class="header__link-nav">
-                                    <img src="./src/image/logo.svg" alt="YouTube">
+                            <div class="col-lg-9 col-md-10">
+                                <a href="#" class="header__link-main-page">
+                                    <img class="header__link-main-page" src="./src/image/logo.svg" alt="YouTube">
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-9">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
+
+                    <div class="col-lg-9 col-md-8">
+                        <div class="row align-items-center py-3">
+                            <div class="col-lg-8 col-md-6">
                                 <input type="text" placeholder="Search..." class="header__search-input">
                             </div>
-                            <div class="col-lg-2">
+                            <div class="col-lg-2 col-md-2">
                                 <a href="#" class="header__link-upload">
                                     <img class="header__link-upload-img" src="./src/image/upload-ico.svg" alt="Upload video">
                                 </a>
                             </div>
-                            <div class="col-lg-1">
+                            <div class="col-lg-1 col-md-1">
                                 <a href="#" class="header__link-notification">
                                     <img class="header__link-notification-img" src="./src/image/notification-ico.svg" alt="Your notifications">
                                 </a>
                             </div>
-                            <div class="col-lg-1">
+                            <div class="col-lg-1 col-md-1">
                                 <a href="#" class="header__link-account">
                                     <img src="./src/image/avatar.png" alt="Your account">
                                 </a>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
 
         </div>
     </header>
 
     <div class="container-fluid p-0">
+        <div class="row w-100 m-0">
 
-        <div class="row">
-            <div class="col-lg-2 p-0">
-                <nav class="nav">
+            <div class="col-lg-3 navbar navbar-expand-lg align-items-start">
+                <nav id="nav"  class="nav flex-column navbar-collapse collapse pr-3 pl-5 pt-5 pb-5">
 
-                    <ul class="nav__list">
+                    <ul class="nav__list mt-5">
                         <li class="nav__list-title">
                             Main
                         </li>
@@ -107,11 +107,12 @@
 
                 </nav>
             </div>
-            <div class="col-lg-10 p-0">
+
+            <div class="col-lg-9 p-0 col-md-12 col-sm-12">
                 <main class="main">
 
                     <section class="banner">
-                        <div class="container align-content-between pl-3 pr-3">
+                        <div class="container align-content-between pl-4 w-100 pr-4">
 
                             <div class="row">
                                 <div class="col-12">
@@ -146,25 +147,238 @@
                         </div>
                     </section>
 
-                    <section class="channel-info shadow">
-                        <div class="container p-3">
-                            <ul class="channel-info__menu d-flex flex-row justify-content-start p-0">
-                                <li class="channel-info__menu-item active p-0 mr-4">Home</li>
-                                <li class="channel-info__menu-item p-0 mr-4">Videos</li>
-                                <li class="channel-info__menu-item p-0 mr-4">Playlist</li>
-                                <li class="channel-info__menu-item p-0 mr-4">Channels</li>
-                                <li class="channel-info__menu-item p-0">About</li>
+                    <section class="channel-info mb-5">
+                        <div class="container channel-info__inner p-4 shadow">
+                            <ul class="p-4 channel-info__menu d-flex flex-row justify-content-start">
+                                <li class="channel-info__menu-item active mr-4">Home</li>
+                                <li class="channel-info__menu-item mr-4">Videos</li>
+                                <li class="channel-info__menu-item mr-4">Playlist</li>
+                                <li class="channel-info__menu-item mr-4">Channels</li>
+                                <li class="channel-info__menu-item">About</li>
                             </ul>
 
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-12 p-3">
+                                    <img src="https://via.placeholder.com/480x270" alt="Video" />
+                                </div>
+                                <div class="col-lg-6 col-sm-12 p-3">
+                                    <h2 class="channel-info__video-title">Attention - Charlie Puth (Boyce Avenue acoustic cover)
+                                        on Spotify & iTunes</h2>
+                                    <p class="channel-info__video-stats">
+                                        <span class="channel-info__video-views">
+                                            12,274,952 views
+                                        </span>
+                                        <span class="channel-info__how-long">
+                                            6 months ago
+                                        </span>
+                                        <span class="channel-info__release-date">
+                                            Released Jun 27, 2016
+                                        </span>
+                                    </p>
+                                    <p class="channel-info__video-description">
+                                        “Attention - Charlie Puth” (Boyce Avenue acoustic cover)
+                                        <br>
+                                        <br>Download on iTunes: <a href="#" class="channel-info__link">http://gendosoft.com/johnsm/alanwalke...</a>
+                                        <br>Download on Google Play: <a href="#" class="channel-info__link">http://gendosoft.com/johnsm/alanwalke...</a>
+                                        <br>Stream on TIDAL: <a href="#" class="channel-info__link">http://gendosoft.com/johnsm/alanwalke...</a>
+                                        <br><br>
+                                        Production company: GENDOSOFT
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="video-list mb-5">
+                        <div class="container p-4">
+
+                            <h2 class="video-list__title mb-2">
+                                Official Music Videos
+                            </h2>
+                            <h3 class="video-list__description mb-5">
+                                Original Music Videos featuring music written and produced by Boyce Avenue.
+                            </h3>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                                    <div class="video-list__card shadow">
+                                        <img class="video-list__card-img"
+                                             src="https://via.placeholder.com/480x270"
+                                             alt="Video Title"
+                                        />
+                                        <div class="video-list__card-info p-3">
+                                            <a href="#" class="video-list__card-video-title mb-2">
+                                                There's Nothing Holdin' Me ...
+                                            </a>
+                                            <p class="video-list__card-channel mb-3">
+                                                boyceavenue
+                                            </p>
+                                            <div class="video-list__card-stats d-flex justify-content-between">
+                                                <div class="video-list__card-views">662,826</div>
+                                                <div class="video-list__card-how-long">2 day ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                                    <div class="video-list__card">
+                                        <div class="video-list__card shadow">
+                                            <img class="video-list__card-img"
+                                                 src="https://via.placeholder.com/480x270"
+                                                 alt="Video Title"
+                                            />
+                                            <div class="video-list__card-info p-3">
+                                                <a href="#"  class="video-list__card-video-title mb-2">
+                                                    There's Nothing Holdin' Me ...
+                                                </a>
+                                                <p class="video-list__card-channel mb-3">
+                                                    boyceavenue
+                                                </p>
+                                                <div class="video-list__card-stats d-flex justify-content-between">
+                                                    <div class="video-list__card-views">662,826</div>
+                                                    <div class="video-list__card-how-long">2 day ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                                    <div class="video-list__card">
+                                        <div class="video-list__card shadow">
+                                            <img class="video-list__card-img"
+                                                 src="https://via.placeholder.com/480x270"
+                                                 alt="Video Title"
+                                            />
+                                            <div class="video-list__card-info p-3">
+                                                <a href="#"  class="video-list__card-video-title mb-2">
+                                                    There's Nothing Holdin' Me ...
+                                                </a>
+                                                <p class="video-list__card-channel mb-3">
+                                                    boyceavenue
+                                                </p>
+                                                <div class="video-list__card-stats d-flex justify-content-between">
+                                                    <div class="video-list__card-views">662,826</div>
+                                                    <div class="video-list__card-how-long">2 day ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                                    <div class="video-list__card">
+                                        <div class="video-list__card shadow">
+                                            <img class="video-list__card-img"
+                                                 src="https://via.placeholder.com/480x270"
+                                                 alt="Video Title"
+                                            />
+                                            <div class="video-list__card-info p-3">
+                                                <a href="#"  class="video-list__card-video-title mb-2">
+                                                    There's Nothing Holdin' Me ...
+                                                </a>
+                                                <p class="video-list__card-channel mb-3">
+                                                    boyceavenue
+                                                </p>
+                                                <div class="video-list__card-stats d-flex justify-content-between">
+                                                    <div class="video-list__card-views">662,826</div>
+                                                    <div class="video-list__card-how-long">2 day ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </section>
 
+                    <section class="video-list mb-5">
+                        <div class="container p-4">
+
+                            <h2 class="video-list__title mb-2">
+                                Official Music Videos
+                            </h2>
+                            <h3 class="video-list__description mb-5">
+                                Original Music Videos featuring music written and produced by Boyce Avenue.
+                            </h3>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                                    <div class="video-list__card shadow">
+                                        <img class="video-list__card-img"
+                                             src="https://via.placeholder.com/480x270"
+                                             alt="Video Title"
+                                        />
+                                        <div class="video-list__card-info p-3">
+                                            <a href="#"  class="video-list__card-video-title mb-2">
+                                                There's Nothing Holdin' Me ...
+                                            </a>
+                                            <p class="video-list__card-channel mb-3">
+                                                boyceavenue
+                                            </p>
+                                            <div class="video-list__card-stats d-flex justify-content-between">
+                                                <div class="video-list__card-views">662,826</div>
+                                                <div class="video-list__card-how-long">2 day ago</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                                    <div class="video-list__card">
+                                        <div class="video-list__card shadow">
+                                            <img class="video-list__card-img"
+                                                 src="https://via.placeholder.com/480x270"
+                                                 alt="Video Title"
+                                            />
+                                            <div class="video-list__card-info p-3">
+                                                <a href="#"  class="video-list__card-video-title mb-2">
+                                                    There's Nothing Holdin' Me ...
+                                                </a>
+                                                <p class="video-list__card-channel mb-3">
+                                                    boyceavenue
+                                                </p>
+                                                <div class="video-list__card-stats d-flex justify-content-between">
+                                                    <div class="video-list__card-views">662,826</div>
+                                                    <div class="video-list__card-how-long">2 day ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+                                    <div class="video-list__card">
+                                        <div class="video-list__card shadow">
+                                            <img class="video-list__card-img"
+                                                 src="https://via.placeholder.com/480x270"
+                                                 alt="Video Title"
+                                            />
+                                            <div class="video-list__card-info p-3">
+                                                <a href="#"  class="video-list__card-video-title mb-2">
+                                                    There's Nothing Holdin' Me ...
+                                                </a>
+                                                <p class="video-list__card-channel mb-3">
+                                                    boyceavenue
+                                                </p>
+                                                <div class="video-list__card-stats d-flex justify-content-between">
+                                                    <div class="video-list__card-views">662,826</div>
+                                                    <div class="video-list__card-how-long">2 day ago</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 m-auto p-3">
+                                    <div class="video-list__btn-view-more text-center">
+                                        <a class="video-list__btn-view-more-link" href="#">View 100+ more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+
                 </main>
             </div>
+
         </div>
-
-
     </div>
 
 

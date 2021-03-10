@@ -4,9 +4,12 @@ $text-color-header: #434f74
 $text-color: #959fbb
 $text-color-link: #6a93ff
 $text-color-hover: #676e81
+$text-color-underline: #719dff
+$text-color-underline-hover: #425c92
 
-$text-size-paragraph: 14px
-$text-size-header: 19px
+
+$text-size-paragraph: 1rem
+$text-size-header: 1.5rem
 
 $icon-size: 20px
 
@@ -15,10 +18,10 @@ $button-bg-color-hover: #be3d68
 
 // Text
 
-@mixin std-text($font-weight: normal)
-  font-size: $text-size-paragraph
+@mixin text-mixin($font-weight: normal, $color: $text-color, $font-size: $text-size-paragraph)
+  font-size: $font-size
   font-weight: $font-weight
-  color: $text-color
+  color: $color
   line-height: 1.2
 
 
@@ -71,17 +74,13 @@ img
   position: absolute
   z-index: 2
 
-.header__inner
-  padding-left: 45px
-  padding-right: 45px
-
 .header__search-input
   border: 0
   width: 100%
   padding-left: 30px
   background: url("../image/search-ico.svg") no-repeat left
   background-size: $icon-size
-  @include std-text
+  @include text-mixin
   &:focus
     outline: 0
 
@@ -90,15 +89,14 @@ img
   @include icon
 
 .header__link-nav-img
+  display: none
   @include icon
   height: 15px
+  max-width: initial
 
 // ********************
 
 //Nav styles
-
-.nav
-  padding: 65px 30px 0 45px
 
 .nav__list
   padding: 0
@@ -110,7 +108,7 @@ img
   display: block
 
 .nav__list-title
-  @include std-text(bold)
+  @include text-mixin(bold)
   color: $text-color-header
   margin: 40px 0
 
@@ -120,7 +118,7 @@ img
     margin-bottom: 0
 
 .nav__link
-  @include std-text(bold)
+  @include text-mixin(bold)
   transition: color .1s linear
   &:hover
     color: $text-color-hover
@@ -187,11 +185,10 @@ img
   border-radius: 5px
 
 .banner__channel-name
-  color: white
-  font-size: 22px
+  @include text-mixin(normal, white, 22px)
 
 .banner__btn-subscribe
-  @include std-text(bold)
+  @include text-mixin(bold)
   color: white
   border: 0
   border-radius: 5px
@@ -209,9 +206,87 @@ img
 // ********************
 // Channel info
 
+.channel-info__inner
+  position: relative
+
+.channel-info__menu
+  position: absolute
+  left: 0
+  top: 0
+  transform: translateY(-90%)
+  width: 100%
+  background-color: white
+
+
 .channel-info__menu-item
-  @include std-text(bold)
+  @include text-mixin(bold)
   display: block
-  padding: 20px
-  .active
-    border: 1px $text-color-header solid
+  padding: 0 0 20px 0
+  transition: border .1s ease-in-out
+  &:hover
+    border-bottom: 3px $text-color-underline-hover solid
+    cursor: pointer
+  &.active
+    border-bottom: 3px $text-color-underline solid
+
+.channel-info__video-title
+  @include text-mixin(normal, $text-color-link, 22px)
+
+.channel-info__release-date
+  display: block
+
+.channel-info__link
+  @include text-mixin(normal, $text-color-link, 14px)
+
+// ********************
+// Video list
+
+.video-list__card
+  border-radius: 5px
+
+.video-list__title
+  @include text-mixin(normal, $text-color-header, $text-size-header)
+
+.video-list__card-img
+  border-radius: 5px 5px 0 0
+
+.video-list__description
+  @include text-mixin()
+
+.video-list__card-video-title
+  @include text-mixin(normal, $text-color-link, 13px)
+
+.video-list__card-channel
+  @include text-mixin(normal, $text-color-header, 12px)
+
+.video-list__card-stats
+  @include text-mixin(normal, $text-color, 12px)
+
+.video-list__card-views
+  @include icon-link
+  &::before
+    background: url("../image/views-ico.svg") no-repeat left
+    height: 14px
+
+.video-list__btn-view-more-link
+  @include text-mixin(bold, $text-color, $text-size-header)
+  padding-right: 30px
+  position: relative
+  transition: color .1s linear
+  &:hover
+    cursor: pointer
+    @include text-mixin(bold, $text-color-hover, $text-size-header)
+    text-decoration: none
+  &:after
+    @include icon
+    content: ""
+    position: absolute
+    right: 0
+    top: 0
+    transition: background .1s linear
+    background: url("../image/arrow.svg") no-repeat right
+
+
+@media (min-width: 992px)
+  .header__link-nav
+    display: none
